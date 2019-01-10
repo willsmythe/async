@@ -1,6 +1,6 @@
 module.exports = function(config) {
     config.set({
-        browsers: ['Firefox'],
+        browsers: ['Firefox', 'Safari'],
         files: ['test/*.js'],
         frameworks: ['browserify', 'mocha'],
         plugins: [
@@ -20,6 +20,11 @@ module.exports = function(config) {
         browserify: {
             debug: true,
             transform: ['babelify']
+        },
+
+        detectBrowsers: {
+            enabled: true,
+            usePhantomJS: false
         },
 
         client: {
