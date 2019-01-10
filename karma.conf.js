@@ -16,17 +16,15 @@ module.exports = function(config) {
         },
         reporters: ['mocha'],
         singleRun: true,
-
         browserify: {
             debug: true,
             transform: ['babelify']
         },
-
         detectBrowsers: {
             enabled: true,
-            usePhantomJS: false
+            usePhantomJS: false,
+            postDetection: function(availableBrowsers) { console.log(availableBrowsers); }
         },
-
         client: {
             mocha: {
                 grep: '@nodeonly',
