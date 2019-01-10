@@ -6,8 +6,9 @@ steps:
     versionSpec: $(node_version)
   displayName: 'Install Node.js'
 
-- bash: |
-    npm install
+- task: Npm@1
+    inputs:
+      command: install
   displayName: 'Install dependencies'
 
 - bash: |
