@@ -17,7 +17,7 @@ steps:
 - bash: |
       export DISPLAY=:99.0
       make -j 4
-      #npm run mocha-browser-test
+      npm run mocha-browser-test
   displayName: 'Run browser tests'
   condition: eq(variables['node_version'], '10.x')
  
