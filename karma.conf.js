@@ -8,7 +8,8 @@ module.exports = function(config) {
             'karma-mocha',
             'karma-mocha-reporter',
             'karma-firefox-launcher',
-            'karma-safari-launcher'
+            'karma-safari-launcher',
+            'karma-detect-browsers'
         ],
         preprocessors: {
             'test/*.js': ['browserify']
